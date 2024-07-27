@@ -55,11 +55,13 @@ const TodoApp = () => {
             <div className='input-field'>
                 <TodoForm addTodo={addTodo} />
                 
-                <select onChange={(e) => setFilter(e.target.value)} className="filter-todo">
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </select>
+                <div className='select'>
+                    <select onChange={(e) => setFilter(e.target.value)} className="filter-todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>    
                 
                 <button onClick={() => setTodos([])} className="empty-button">Delete All 
                     <FontAwesomeIcon icon={faTrash} />

@@ -45,11 +45,39 @@
     color: white; 
     background: #d88771;
   }
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1.15rem;
+  }
+
+  .select {
+    margin-left: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .select::after {
+    content: "\25BC";                                       /* Downwards arrow */   
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
 
   .filter-todo {
     font-size: 1.5rem;
     padding: 0.5rem;
-    margin-left: 1rem;
     min-width: 210px;
     min-height: 5.5vh;
   }
@@ -125,36 +153,3 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
-    color: #ff6f47;
-    width: 10rem;
-    cursor: pointer;
-    padding: 1.15rem;
-  }
-
-  .select {
-    margin: 0 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .select::after {
-    content: "\25BC";                                       /* Downwards arrow */   
-    position: absolute;
-    background: #ff6f47;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-
-  .select::hover::after {
-    background: white;
-    color: #ff6f47;
-  }
