@@ -3,6 +3,8 @@ import TodoApp from './TodoApp';
 import './styles.css';
 
 const App = () => {
+    console.log('Parent App component mounted');
+
     return (
         <div className="App">
             <TodoApp />

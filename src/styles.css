@@ -153,3 +153,33 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
+  @media (max-width: 768px) {
+    .input-field {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .input-field form,
+    .input-field .select,
+    .input-field .empty-button {
+      margin-bottom: 1rem;
+    }
+  
+    .input-field form input,
+    .input-field button,
+    .filter-todo {
+      font-size: 1.2rem;
+      min-height: 4.5vh;
+    }
+  
+    .input-field .select {
+      margin-left: 0;
+    }
+  
+    .input-field .empty-button {
+      margin-left: 0;
+      min-width: auto;
+      padding: 0.5rem 1rem;
+    }
+  }
